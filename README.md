@@ -31,6 +31,61 @@ Wins / Losses
 Total PnL
 Position exposure
 Trade value allocation logic
+
+BUT I NEED TO DO!
+“OCO TP/SL enabled” means your bot is using a Binance One-Cancels-the-Other (OCO) order to automate both:
+
+TP = Take Profit
+SL = Stop Loss
+🔥 What OCO actually does
+
+When you place an OCO order, Binance creates two linked sell orders at the same time:
+
+1. Take Profit order (LIMIT SELL)
+Executes if price goes UP to your target
+Locks profit
+2. Stop Loss order (STOP / STOP-LIMIT SELL)
+Executes if price goes DOWN to your risk level
+Cuts loss
+⚙️ Key rule (VERY IMPORTANT)
+
+👉 When ONE order executes, the OTHER is automatically cancelled.
+
+That is the meaning of:
+
+OCO = One Cancels the Other
+
+📊 Simple example
+
+You buy BTC at 60,000 USDT
+
+You set:
+
+TP = 62,000
+SL = 58,000
+What happens:
+Scenario	Action
+Price hits 62,000	TP SELL executes → SL cancels
+Price drops to 58,000	SL SELL executes → TP cancels
+🧠 Why this is important
+
+Without OCO:
+
+You must manually close trades
+Or run separate bots
+Risk of missing exit
+
+With OCO:
+
+Exit is fully automated
+No manual intervention needed
+Safer risk management
+
+**SO WHEN RECIVE ALERT TO alerts_log.txt THAT SCRIPT NEED TO EXTRACT THE ASSET SYMBLE,TP,SL MARKET ORDER IMIDIATLY total/25% of the testnet binance wallet balance auto plce   SL,TP AND SHOW THE UPDATES ON WEB PAGE Open Positions,Symbol 	Side 	Qty 	Unrealized 	% 	Trade Value 	Market Value,💰 Starting: 696.05
+🏦 Wallet: 
+📈 Unrealized: 
+💵 Realized: **
+LIKE BELOW IMAGE
 <img width="1366" height="643" alt="image" src="https://github.com/user-attachments/assets/783503ac-3053-49a6-872d-9fbb4a730993" />
 
 
