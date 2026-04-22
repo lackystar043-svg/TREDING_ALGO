@@ -81,13 +81,12 @@ Exit is fully automated
 No manual intervention needed
 Safer risk management
 
-**SO WHEN RECIVE ALERT TO alerts_log.txt THAT SCRIPT NEED TO EXTRACT THE ASSET SYMBLE,TP,SL MARKET ORDER IMIDIATLY total/25% of the testnet binance wallet balance auto plce   SL,TP AND SHOW THE UPDATES ON WEB PAGE Open Positions,Symbol 	Side 	Qty 	Unrealized 	% 	Trade Value 	Market Value,💰 Starting: 696.05
-🏦 Wallet: 
-📈 Unrealized: 
-💵 Realized: **
+To do!..........
+
+**SO WHEN RECIVE ALERT TO alerts_log.txt THAT SCRIPT NEED TO EXTRACT THE ASSET SYMBLE,TP,SL MARKET ORDER IMIDIATLY total/25% of the testnet binance wallet balance auto plce SL,TP AND SHOW THE UPDATES ON WEB PAGE Open Positions,Symbol Side Qty Unrealized % Trade Value Market Value,💰 Starting: 696.05 🏦 Wallet: 📈 Unrealized: 💵 Realized: ** LIKE BELOW IMAGE 
 LIKE BELOW IMAGE
 <img width="1366" height="643" alt="image" src="https://github.com/user-attachments/assets/783503ac-3053-49a6-872d-9fbb4a730993" />
 
-
+.......................
 # TREDING_ALGO
 🧠 System Workflow Market data is analyzed by the trading algorithm Pattern detection triggers buy/sell signals Signals are saved into a .txt file Execution module reads signals and places test trades on Binance Dashboard continuously fetches trade updates User monitors performance in real time via web UI
