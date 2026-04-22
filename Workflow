@@ -1,0 +1,11 @@
+TradingView/pettern_detection.py Alert
+        ↓
+alerts_log.txt
+        ↓
+Bot Detects
+        ↓
+Market Buy
+        ↓
+Place OCO
+    ├── Take Profit
+    └── Stop Loss
