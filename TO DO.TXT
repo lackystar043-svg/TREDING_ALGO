@@ -1,0 +1,141 @@
+📌 Project Requirements – Trading Algo (Binance Testnet Automation System)
+🧠 Project Overview
+
+I need a Python-based automated crypto trading system connected to Binance Spot Testnet.
+
+The system should:
+
+Read trading signals from a file
+Execute trades automatically
+Manage risk using TP/SL (OCO logic)
+Track performance in real time
+Display everything on a Flask web dashboard
+
+This is a fully automated trading bot + monitoring system for simulation/testing purposes.
+
+⚙️ Core System Requirements
+1. 🔌 Binance Testnet Integration
+Use Binance Spot Testnet API
+API keys stored securely in .env file
+Must support:
+Market orders
+Balance fetching
+Open positions tracking
+2. 📡 Signal System (Input Source)
+
+The system must read trading signals from:
+
+alerts_log.txt
+
+Each signal contains:
+
+Trading pair (symbol)
+Entry signal
+Take Profit (TP)
+Stop Loss (SL)
+
+Example format:
+
+BTCUSDT BUY ENTRY=60000 TP=62000 SL=58000
+3. 🤖 Automated Trade Execution
+
+When a new signal appears:
+
+System must:
+
+Parse symbol, TP, SL
+Calculate position size automatically:
+Default: 25% of wallet balance per trade
+Execute market order instantly
+Open position on Binance Testnet
+4. 🧠 Risk Management (OCO System)
+
+Each trade must automatically include:
+
+✔ Take Profit (TP)
+Closes trade when target price is reached
+✔ Stop Loss (SL)
+Closes trade when price goes against position
+⚡ OCO Logic (Important)
+If TP executes → SL cancels automatically
+If SL executes → TP cancels automatically
+5. 💰 Binance Spot Trading Fees (Mandatory)
+
+System must calculate real fees:
+
+Fee rate: 0.1% per trade
+Apply on:
+Buy order
+Sell order
+Required:
+Deduct fees from profit calculations
+Show total fees in dashboard
+Display net PnL (after fees)
+6. 📊 Web Dashboard (Flask – Localhost)
+
+Build a live dashboard at:
+
+http://127.0.0.1:5000/
+
+Must display:
+💰 Account Info
+Starting balance (e.g. 696.05)
+Current wallet balance
+Total equity
+📈 Performance
+Unrealized PnL
+Realized PnL
+Total trading fees
+Win / Loss ratio
+📦 Open Positions Table
+
+Each position must show:
+
+Symbol
+Side (BUY/SELL)
+Quantity
+Entry price
+Market price
+Trade value
+Market value
+Unrealized PnL (%)
+7. 📊 Portfolio & Risk Tracking
+
+System must track:
+
+Total wins / losses
+Total profit/loss (net of fees)
+Exposure per trade
+Capital allocation logic (25% per trade default)
+Active position monitoring
+8. 🔄 System Workflow (Important)
+
+Flow must be:
+
+Signal written to alerts_log.txt
+Bot detects new signal
+Parses trade details
+Calculates position size
+Executes market order
+Adds TP + SL (OCO)
+Tracks trade in system
+Updates dashboard in real-time
+📌 Technical Requirements
+Python (core language)
+Flask (dashboard)
+Binance API integration
+File-based signal reader
+Real-time updates (auto refresh or polling)
+Clean modular structure:
+strategy engine
+execution engine
+risk manager
+dashboard
+🎯 Goal of the Project
+
+Create a fully automated crypto trading simulation system that:
+
+Executes trades without manual input
+Manages risk automatically
+Tracks performance accurately (including fees)
+Displays real-time dashboard metrics
